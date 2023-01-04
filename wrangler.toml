@@ -1,0 +1,13 @@
+name = "test-case-slow-do"
+compatibility_date = "2023-01-04"
+main = 'src/index.ts'
+workers_dev = true
+
+[durable_objects]
+bindings = [
+  {name = "TEST", class_name = "Test"},
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["Test"]
