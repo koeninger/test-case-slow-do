@@ -10,7 +10,13 @@ Published test-case-slow-do (0.41 sec)
   https://test-case-slow-do.estii.workers.dev
 [...]
 $ curl -X POST https://test-case-slow-do.estii.workers.dev/worker -d @test.json
-{"worker":"worker","duration":2,"length":815159}
+worker: worker
+duration: 0ms
+length: 815159
+colo: HKG
 $ curl -X POST https://test-case-slow-do.estii.workers.dev/durable -d @test.json
-{"worker":"durable","duration":9968,"length":815159}
+worker: durable
+duration: 4504ms
+length: 815159
+colo: SIN
 ```
