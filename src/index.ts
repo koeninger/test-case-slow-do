@@ -12,6 +12,11 @@ export default {
       const test = env.TEST.get(env.TEST.idFromName("test"));
       return test.fetch(req);
     }
+    if (url.pathname === "/fix") {
+      const test = env.TEST.get(env.TEST.idFromName("test"));
+      const req2 = new Request(req, { method: "POST", body: await req.arrayBuffer() })
+      return test.fetch(req2);
+    }
 
     return measure(req, "worker");
   },
